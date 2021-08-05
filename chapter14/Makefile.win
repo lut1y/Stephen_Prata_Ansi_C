@@ -1,0 +1,111 @@
+# Project: chapter14
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter14_private.res
+OBJ      = main.o book.o manybook.o friend.o friends.o funds1.o funds2.o funds3.o names1.o names2.o names3.o complit.o flexmemb.o funds4.o booksave.o enum.o func_ptr.o task1.o task2.o task3.o task4.o task6.o task5.o task7.o task10.o task8.o task10_2.o $(RES)
+LINKOBJ  = main.o book.o manybook.o friend.o friends.o funds1.o funds2.o funds3.o names1.o names2.o names3.o complit.o flexmemb.o funds4.o booksave.o enum.o func_ptr.o task1.o task2.o task3.o task4.o task6.o task5.o task7.o task10.o task8.o task10_2.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32 -pg -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter14.exe
+CXXFLAGS = $(CXXINCS) -m32 -pg -g3
+CFLAGS   = $(INCS) -m32 -pg -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+book.o: book.c
+	$(CC) -c book.c -o book.o $(CFLAGS)
+
+manybook.o: manybook.c
+	$(CC) -c manybook.c -o manybook.o $(CFLAGS)
+
+friend.o: friend.c
+	$(CC) -c friend.c -o friend.o $(CFLAGS)
+
+friends.o: friends.c
+	$(CC) -c friends.c -o friends.o $(CFLAGS)
+
+funds1.o: funds1.c
+	$(CC) -c funds1.c -o funds1.o $(CFLAGS)
+
+funds2.o: funds2.c
+	$(CC) -c funds2.c -o funds2.o $(CFLAGS)
+
+funds3.o: funds3.c
+	$(CC) -c funds3.c -o funds3.o $(CFLAGS)
+
+names1.o: names1.c
+	$(CC) -c names1.c -o names1.o $(CFLAGS)
+
+names2.o: names2.c
+	$(CC) -c names2.c -o names2.o $(CFLAGS)
+
+names3.o: names3.c
+	$(CC) -c names3.c -o names3.o $(CFLAGS)
+
+complit.o: complit.c
+	$(CC) -c complit.c -o complit.o $(CFLAGS)
+
+flexmemb.o: flexmemb.c
+	$(CC) -c flexmemb.c -o flexmemb.o $(CFLAGS)
+
+funds4.o: funds4.c
+	$(CC) -c funds4.c -o funds4.o $(CFLAGS)
+
+booksave.o: booksave.c
+	$(CC) -c booksave.c -o booksave.o $(CFLAGS)
+
+enum.o: enum.c
+	$(CC) -c enum.c -o enum.o $(CFLAGS)
+
+func_ptr.o: func_ptr.c
+	$(CC) -c func_ptr.c -o func_ptr.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task10.o: task10.c
+	$(CC) -c task10.c -o task10.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+task10_2.o: task10_2.c
+	$(CC) -c task10_2.c -o task10_2.o $(CFLAGS)
+
+chapter14_private.res: chapter14_private.rc 
+	$(WINDRES) -i chapter14_private.rc -F pe-i386 --input-format=rc -o chapter14_private.res -O coff 
+

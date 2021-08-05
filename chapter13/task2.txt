@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+//	count(argc, argv);
+//	reducto(argc, argv);
+//	addaword();
+//	reverse();
+//	append();
+//	randbin();
+//	task1();
+	task2(argc, argv);
+	
+	return 0;
+}

@@ -1,0 +1,93 @@
+# Project: chapter13
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter13_private.res
+OBJ      = main.o count.o reducto.o addaword.o reverse.o append.o randbin.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task12.o task9.o task10.o task11.o task13.o task14.o $(RES)
+LINKOBJ  = main.o count.o reducto.o addaword.o reverse.o append.o randbin.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task12.o task9.o task10.o task11.o task13.o task14.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter13.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+count.o: count.c
+	$(CC) -c count.c -o count.o $(CFLAGS)
+
+reducto.o: reducto.c
+	$(CC) -c reducto.c -o reducto.o $(CFLAGS)
+
+addaword.o: addaword.c
+	$(CC) -c addaword.c -o addaword.o $(CFLAGS)
+
+reverse.o: reverse.c
+	$(CC) -c reverse.c -o reverse.o $(CFLAGS)
+
+append.o: append.c
+	$(CC) -c append.c -o append.o $(CFLAGS)
+
+randbin.o: randbin.c
+	$(CC) -c randbin.c -o randbin.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+task12.o: task12.c
+	$(CC) -c task12.c -o task12.o $(CFLAGS)
+
+task9.o: task9.c
+	$(CC) -c task9.c -o task9.o $(CFLAGS)
+
+task10.o: task10.c
+	$(CC) -c task10.c -o task10.o $(CFLAGS)
+
+task11.o: task11.c
+	$(CC) -c task11.c -o task11.o $(CFLAGS)
+
+task13.o: task13.c
+	$(CC) -c task13.c -o task13.o $(CFLAGS)
+
+task14.o: task14.c
+	$(CC) -c task14.c -o task14.o $(CFLAGS)
+
+chapter13_private.res: chapter13_private.rc 
+	$(WINDRES) -i chapter13_private.rc --input-format=rc -o chapter13_private.res -O coff 
+

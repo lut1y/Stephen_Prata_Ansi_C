@@ -1,0 +1,13 @@
+// форматирование строк
+#include <stdio.h>
+#define BLURB "Authentic imitation!"
+/*
+int main(void) {
+	
+	printf("[%2s]\n", BLURB);
+	printf("[%24s]\n", BLURB);
+	printf("[%24.5s]\n", BLURB); // выводим только 5 символов
+	printf("[%-24.5s]\n", BLURB);
+	
+	return 0;
+}*/

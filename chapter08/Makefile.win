@@ -1,0 +1,78 @@
+# Project: chapter08
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter08_private.res
+OBJ      = main.o echo_eof.o showchar1.o showchar2.o echo.o file_eof.o guess.o checking.o menuette.o task1.o task2.o task3.o task4.o task5.o task6.o task8.o $(RES)
+LINKOBJ  = main.o echo_eof.o showchar1.o showchar2.o echo.o file_eof.o guess.o checking.o menuette.o task1.o task2.o task3.o task4.o task5.o task6.o task8.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter08.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+echo_eof.o: echo_eof.c
+	$(CC) -c echo_eof.c -o echo_eof.o $(CFLAGS)
+
+showchar1.o: showchar1.c
+	$(CC) -c showchar1.c -o showchar1.o $(CFLAGS)
+
+showchar2.o: showchar2.c
+	$(CC) -c showchar2.c -o showchar2.o $(CFLAGS)
+
+echo.o: echo.c
+	$(CC) -c echo.c -o echo.o $(CFLAGS)
+
+file_eof.o: file_eof.c
+	$(CC) -c file_eof.c -o file_eof.o $(CFLAGS)
+
+guess.o: guess.c
+	$(CC) -c guess.c -o guess.o $(CFLAGS)
+
+checking.o: checking.c
+	$(CC) -c checking.c -o checking.o $(CFLAGS)
+
+menuette.o: menuette.c
+	$(CC) -c menuette.c -o menuette.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+chapter08_private.res: chapter08_private.rc 
+	$(WINDRES) -i chapter08_private.rc --input-format=rc -o chapter08_private.res -O coff 
+

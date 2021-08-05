@@ -1,0 +1,165 @@
+# Project: chapter06
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter06_private.res
+OBJ      = for_wild.o main.o summing.o when.o while1.o while2.o cmpflt.o t_and_f.o truth.o trouble.o boolean.o sweetie1.o sweetie2.o for_cube.o for_down.o for_13s.o for_char.o for_geo.o for_none.o for_show.o do_while.o entry.o postage.o power.o rows1.o rows2.o scores_in.o task2.o task3.o task4.o task5.o zeno.o task6.o task7.o task8.o task9.o task10.o task11.o task12.o task13.o task14.o task15.o task16.o task17.o task18.o $(RES)
+LINKOBJ  = for_wild.o main.o summing.o when.o while1.o while2.o cmpflt.o t_and_f.o truth.o trouble.o boolean.o sweetie1.o sweetie2.o for_cube.o for_down.o for_13s.o for_char.o for_geo.o for_none.o for_show.o do_while.o entry.o postage.o power.o rows1.o rows2.o scores_in.o task2.o task3.o task4.o task5.o zeno.o task6.o task7.o task8.o task9.o task10.o task11.o task12.o task13.o task14.o task15.o task16.o task17.o task18.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter06.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+for_wild.o: for_wild.c
+	$(CC) -c for_wild.c -o for_wild.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+summing.o: summing.c
+	$(CC) -c summing.c -o summing.o $(CFLAGS)
+
+when.o: when.c
+	$(CC) -c when.c -o when.o $(CFLAGS)
+
+while1.o: while1.c
+	$(CC) -c while1.c -o while1.o $(CFLAGS)
+
+while2.o: while2.c
+	$(CC) -c while2.c -o while2.o $(CFLAGS)
+
+cmpflt.o: cmpflt.c
+	$(CC) -c cmpflt.c -o cmpflt.o $(CFLAGS)
+
+t_and_f.o: t_and_f.c
+	$(CC) -c t_and_f.c -o t_and_f.o $(CFLAGS)
+
+truth.o: truth.c
+	$(CC) -c truth.c -o truth.o $(CFLAGS)
+
+trouble.o: trouble.c
+	$(CC) -c trouble.c -o trouble.o $(CFLAGS)
+
+boolean.o: boolean.c
+	$(CC) -c boolean.c -o boolean.o $(CFLAGS)
+
+sweetie1.o: sweetie1.c
+	$(CC) -c sweetie1.c -o sweetie1.o $(CFLAGS)
+
+sweetie2.o: sweetie2.c
+	$(CC) -c sweetie2.c -o sweetie2.o $(CFLAGS)
+
+for_cube.o: for_cube.c
+	$(CC) -c for_cube.c -o for_cube.o $(CFLAGS)
+
+for_down.o: for_down.c
+	$(CC) -c for_down.c -o for_down.o $(CFLAGS)
+
+for_13s.o: for_13s.c
+	$(CC) -c for_13s.c -o for_13s.o $(CFLAGS)
+
+for_char.o: for_char.c
+	$(CC) -c for_char.c -o for_char.o $(CFLAGS)
+
+for_geo.o: for_geo.c
+	$(CC) -c for_geo.c -o for_geo.o $(CFLAGS)
+
+for_none.o: for_none.c
+	$(CC) -c for_none.c -o for_none.o $(CFLAGS)
+
+for_show.o: for_show.c
+	$(CC) -c for_show.c -o for_show.o $(CFLAGS)
+
+do_while.o: do_while.c
+	$(CC) -c do_while.c -o do_while.o $(CFLAGS)
+
+entry.o: entry.c
+	$(CC) -c entry.c -o entry.o $(CFLAGS)
+
+postage.o: postage.c
+	$(CC) -c postage.c -o postage.o $(CFLAGS)
+
+power.o: power.c
+	$(CC) -c power.c -o power.o $(CFLAGS)
+
+rows1.o: rows1.c
+	$(CC) -c rows1.c -o rows1.o $(CFLAGS)
+
+rows2.o: rows2.c
+	$(CC) -c rows2.c -o rows2.o $(CFLAGS)
+
+scores_in.o: scores_in.c
+	$(CC) -c scores_in.c -o scores_in.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+zeno.o: zeno.c
+	$(CC) -c zeno.c -o zeno.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+task9.o: task9.c
+	$(CC) -c task9.c -o task9.o $(CFLAGS)
+
+task10.o: task10.c
+	$(CC) -c task10.c -o task10.o $(CFLAGS)
+
+task11.o: task11.c
+	$(CC) -c task11.c -o task11.o $(CFLAGS)
+
+task12.o: task12.c
+	$(CC) -c task12.c -o task12.o $(CFLAGS)
+
+task13.o: task13.c
+	$(CC) -c task13.c -o task13.o $(CFLAGS)
+
+task14.o: task14.c
+	$(CC) -c task14.c -o task14.o $(CFLAGS)
+
+task15.o: task15.c
+	$(CC) -c task15.c -o task15.o $(CFLAGS)
+
+task16.o: task16.c
+	$(CC) -c task16.c -o task16.o $(CFLAGS)
+
+task17.o: task17.c
+	$(CC) -c task17.c -o task17.o $(CFLAGS)
+
+task18.o: task18.c
+	$(CC) -c task18.c -o task18.o $(CFLAGS)
+
+chapter06_private.res: chapter06_private.rc 
+	$(WINDRES) -i chapter06_private.rc --input-format=rc -o chapter06_private.res -O coff 
+

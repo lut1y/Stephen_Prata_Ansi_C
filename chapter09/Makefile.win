@@ -1,0 +1,108 @@
+# Project: chapter09
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter09_private.res
+OBJ      = main.o lethead1.o loccheck.o lethead2.o lesser.o misuse.o proto.o recur.o factor.o binary.o usehotel.o hotel.o swap1.o swap2.o swap3.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task9.o task10.o task11.o $(RES)
+LINKOBJ  = main.o lethead1.o loccheck.o lethead2.o lesser.o misuse.o proto.o recur.o factor.o binary.o usehotel.o hotel.o swap1.o swap2.o swap3.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task9.o task10.o task11.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter09.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+lethead1.o: lethead1.c
+	$(CC) -c lethead1.c -o lethead1.o $(CFLAGS)
+
+loccheck.o: loccheck.c
+	$(CC) -c loccheck.c -o loccheck.o $(CFLAGS)
+
+lethead2.o: lethead2.c
+	$(CC) -c lethead2.c -o lethead2.o $(CFLAGS)
+
+lesser.o: lesser.c
+	$(CC) -c lesser.c -o lesser.o $(CFLAGS)
+
+misuse.o: misuse.c
+	$(CC) -c misuse.c -o misuse.o $(CFLAGS)
+
+proto.o: proto.c
+	$(CC) -c proto.c -o proto.o $(CFLAGS)
+
+recur.o: recur.c
+	$(CC) -c recur.c -o recur.o $(CFLAGS)
+
+factor.o: factor.c
+	$(CC) -c factor.c -o factor.o $(CFLAGS)
+
+binary.o: binary.c
+	$(CC) -c binary.c -o binary.o $(CFLAGS)
+
+usehotel.o: usehotel.c
+	$(CC) -c usehotel.c -o usehotel.o $(CFLAGS)
+
+hotel.o: hotel.c
+	$(CC) -c hotel.c -o hotel.o $(CFLAGS)
+
+swap1.o: swap1.c
+	$(CC) -c swap1.c -o swap1.o $(CFLAGS)
+
+swap2.o: swap2.c
+	$(CC) -c swap2.c -o swap2.o $(CFLAGS)
+
+swap3.o: swap3.c
+	$(CC) -c swap3.c -o swap3.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+task9.o: task9.c
+	$(CC) -c task9.c -o task9.o $(CFLAGS)
+
+task10.o: task10.c
+	$(CC) -c task10.c -o task10.o $(CFLAGS)
+
+task11.o: task11.c
+	$(CC) -c task11.c -o task11.o $(CFLAGS)
+
+chapter09_private.res: chapter09_private.rc 
+	$(WINDRES) -i chapter09_private.rc --input-format=rc -o chapter09_private.res -O coff 
+

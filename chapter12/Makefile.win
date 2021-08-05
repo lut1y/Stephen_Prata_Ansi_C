@@ -1,0 +1,108 @@
+# Project: chapter12
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter12_private.res
+OBJ      = main.o hiding.o forc99.o loc_stat.o global.o parta.o partb.o rand0.o r_drive0.o s_and_r.o r_drive1.o diceroll.o manydice.o dyn_arr.o where.o task1.o pe12-2b.o pe12-2a.o task3.o task3a.o task4.o task6.o task5.o task9.o task7.o task8.o $(RES)
+LINKOBJ  = main.o hiding.o forc99.o loc_stat.o global.o parta.o partb.o rand0.o r_drive0.o s_and_r.o r_drive1.o diceroll.o manydice.o dyn_arr.o where.o task1.o pe12-2b.o pe12-2a.o task3.o task3a.o task4.o task6.o task5.o task9.o task7.o task8.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter12.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+hiding.o: hiding.c
+	$(CC) -c hiding.c -o hiding.o $(CFLAGS)
+
+forc99.o: forc99.c
+	$(CC) -c forc99.c -o forc99.o $(CFLAGS)
+
+loc_stat.o: loc_stat.c
+	$(CC) -c loc_stat.c -o loc_stat.o $(CFLAGS)
+
+global.o: global.c
+	$(CC) -c global.c -o global.o $(CFLAGS)
+
+parta.o: parta.c
+	$(CC) -c parta.c -o parta.o $(CFLAGS)
+
+partb.o: partb.c
+	$(CC) -c partb.c -o partb.o $(CFLAGS)
+
+rand0.o: rand0.c
+	$(CC) -c rand0.c -o rand0.o $(CFLAGS)
+
+r_drive0.o: r_drive0.c
+	$(CC) -c r_drive0.c -o r_drive0.o $(CFLAGS)
+
+s_and_r.o: s_and_r.c
+	$(CC) -c s_and_r.c -o s_and_r.o $(CFLAGS)
+
+r_drive1.o: r_drive1.c
+	$(CC) -c r_drive1.c -o r_drive1.o $(CFLAGS)
+
+diceroll.o: diceroll.c
+	$(CC) -c diceroll.c -o diceroll.o $(CFLAGS)
+
+manydice.o: manydice.c
+	$(CC) -c manydice.c -o manydice.o $(CFLAGS)
+
+dyn_arr.o: dyn_arr.c
+	$(CC) -c dyn_arr.c -o dyn_arr.o $(CFLAGS)
+
+where.o: where.c
+	$(CC) -c where.c -o where.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+pe12-2b.o: pe12-2b.c
+	$(CC) -c pe12-2b.c -o pe12-2b.o $(CFLAGS)
+
+pe12-2a.o: pe12-2a.c
+	$(CC) -c pe12-2a.c -o pe12-2a.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task3a.o: task3a.c
+	$(CC) -c task3a.c -o task3a.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task9.o: task9.c
+	$(CC) -c task9.c -o task9.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+chapter12_private.res: chapter12_private.rc 
+	$(WINDRES) -i chapter12_private.rc --input-format=rc -o chapter12_private.res -O coff 
+

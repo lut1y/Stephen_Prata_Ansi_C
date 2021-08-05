@@ -1,0 +1,105 @@
+# Project: chapter04
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = chapter04_private.res
+OBJ      = talkback.o praisel.o praisel2.o pizza.o defines.o printout.o width.o floats.o flags.o stringf.o intconv.o floatcnv.o prntval.o longstr.o input.o varwid.o skip2.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o $(RES)
+LINKOBJ  = talkback.o praisel.o praisel2.o pizza.o defines.o printout.o width.o floats.o flags.o stringf.o intconv.o floatcnv.o prntval.o longstr.o input.o varwid.o skip2.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter04.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+talkback.o: talkback.c
+	$(CC) -c talkback.c -o talkback.o $(CFLAGS)
+
+praisel.o: praisel.c
+	$(CC) -c praisel.c -o praisel.o $(CFLAGS)
+
+praisel2.o: praisel2.c
+	$(CC) -c praisel2.c -o praisel2.o $(CFLAGS)
+
+pizza.o: pizza.c
+	$(CC) -c pizza.c -o pizza.o $(CFLAGS)
+
+defines.o: defines.c
+	$(CC) -c defines.c -o defines.o $(CFLAGS)
+
+printout.o: printout.c
+	$(CC) -c printout.c -o printout.o $(CFLAGS)
+
+width.o: width.c
+	$(CC) -c width.c -o width.o $(CFLAGS)
+
+floats.o: floats.c
+	$(CC) -c floats.c -o floats.o $(CFLAGS)
+
+flags.o: flags.c
+	$(CC) -c flags.c -o flags.o $(CFLAGS)
+
+stringf.o: stringf.c
+	$(CC) -c stringf.c -o stringf.o $(CFLAGS)
+
+intconv.o: intconv.c
+	$(CC) -c intconv.c -o intconv.o $(CFLAGS)
+
+floatcnv.o: floatcnv.c
+	$(CC) -c floatcnv.c -o floatcnv.o $(CFLAGS)
+
+prntval.o: prntval.c
+	$(CC) -c prntval.c -o prntval.o $(CFLAGS)
+
+longstr.o: longstr.c
+	$(CC) -c longstr.c -o longstr.o $(CFLAGS)
+
+input.o: input.c
+	$(CC) -c input.c -o input.o $(CFLAGS)
+
+varwid.o: varwid.c
+	$(CC) -c varwid.c -o varwid.o $(CFLAGS)
+
+skip2.o: skip2.c
+	$(CC) -c skip2.c -o skip2.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+chapter04_private.res: chapter04_private.rc 
+	$(WINDRES) -i chapter04_private.rc --input-format=rc -o chapter04_private.res -O coff 
+

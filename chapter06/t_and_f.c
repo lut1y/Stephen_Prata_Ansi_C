@@ -1,0 +1,12 @@
+// истинные и ложные значения в языке C
+#include <stdio.h>
+
+int t_and_f(void) {
+	int true_val, false_val;
+	
+	true_val = (10 > 2); // значение истинного отношения
+	false_val = (10 == 2); // значения ложного отношения
+	printf("true = %d; false = %d \n", true_val, false_val);
+	
+	return 0;
+}

@@ -1,0 +1,132 @@
+# Project: chapter10
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter10_private.res
+OBJ      = main.o pnt_add.o ptr_ops.o zippo1.o zippo2.o array2d.o day_mon1.o no_data.o some_data.o day_mon2.o designate.o bounds.o rain.o day_mon3.o sum_sum_arr1.o sum_arr2.o order.o arf.o vararr2d.o flc.o task1.o task2.o task3.o task4.o task5.o task13.o task6.o task7.o task8.o task9.o task10.o task11.o task12.o task14.o $(RES)
+LINKOBJ  = main.o pnt_add.o ptr_ops.o zippo1.o zippo2.o array2d.o day_mon1.o no_data.o some_data.o day_mon2.o designate.o bounds.o rain.o day_mon3.o sum_sum_arr1.o sum_arr2.o order.o arf.o vararr2d.o flc.o task1.o task2.o task3.o task4.o task5.o task13.o task6.o task7.o task8.o task9.o task10.o task11.o task12.o task14.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter10.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+pnt_add.o: pnt_add.c
+	$(CC) -c pnt_add.c -o pnt_add.o $(CFLAGS)
+
+ptr_ops.o: ptr_ops.c
+	$(CC) -c ptr_ops.c -o ptr_ops.o $(CFLAGS)
+
+zippo1.o: zippo1.c
+	$(CC) -c zippo1.c -o zippo1.o $(CFLAGS)
+
+zippo2.o: zippo2.c
+	$(CC) -c zippo2.c -o zippo2.o $(CFLAGS)
+
+array2d.o: array2d.c
+	$(CC) -c array2d.c -o array2d.o $(CFLAGS)
+
+day_mon1.o: day_mon1.c
+	$(CC) -c day_mon1.c -o day_mon1.o $(CFLAGS)
+
+no_data.o: no_data.c
+	$(CC) -c no_data.c -o no_data.o $(CFLAGS)
+
+some_data.o: some_data.c
+	$(CC) -c some_data.c -o some_data.o $(CFLAGS)
+
+day_mon2.o: day_mon2.c
+	$(CC) -c day_mon2.c -o day_mon2.o $(CFLAGS)
+
+designate.o: designate.c
+	$(CC) -c designate.c -o designate.o $(CFLAGS)
+
+bounds.o: bounds.c
+	$(CC) -c bounds.c -o bounds.o $(CFLAGS)
+
+rain.o: rain.c
+	$(CC) -c rain.c -o rain.o $(CFLAGS)
+
+day_mon3.o: day_mon3.c
+	$(CC) -c day_mon3.c -o day_mon3.o $(CFLAGS)
+
+sum_sum_arr1.o: sum_sum_arr1.c
+	$(CC) -c sum_sum_arr1.c -o sum_sum_arr1.o $(CFLAGS)
+
+sum_arr2.o: sum_arr2.c
+	$(CC) -c sum_arr2.c -o sum_arr2.o $(CFLAGS)
+
+order.o: order.c
+	$(CC) -c order.c -o order.o $(CFLAGS)
+
+arf.o: arf.c
+	$(CC) -c arf.c -o arf.o $(CFLAGS)
+
+vararr2d.o: vararr2d.c
+	$(CC) -c vararr2d.c -o vararr2d.o $(CFLAGS)
+
+flc.o: flc.c
+	$(CC) -c flc.c -o flc.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task13.o: task13.c
+	$(CC) -c task13.c -o task13.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+task9.o: task9.c
+	$(CC) -c task9.c -o task9.o $(CFLAGS)
+
+task10.o: task10.c
+	$(CC) -c task10.c -o task10.o $(CFLAGS)
+
+task11.o: task11.c
+	$(CC) -c task11.c -o task11.o $(CFLAGS)
+
+task12.o: task12.c
+	$(CC) -c task12.c -o task12.o $(CFLAGS)
+
+task14.o: task14.c
+	$(CC) -c task14.c -o task14.o $(CFLAGS)
+
+chapter10_private.res: chapter10_private.rc 
+	$(WINDRES) -i chapter10_private.rc --input-format=rc -o chapter10_private.res -O coff 
+

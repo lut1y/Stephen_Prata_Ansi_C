@@ -1,0 +1,108 @@
+# Project: chapter05
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter05_private.res
+OBJ      = shoes1.o shoes2.o golf.o squares.o wheat.o post_pre.o main.o min_sec.o divide.o rules.o sizeof_.o add_one.o bottles.o addemup.o convert.o pound_.o running.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task9.o $(RES)
+LINKOBJ  = shoes1.o shoes2.o golf.o squares.o wheat.o post_pre.o main.o min_sec.o divide.o rules.o sizeof_.o add_one.o bottles.o addemup.o convert.o pound_.o running.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task9.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter05.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+shoes1.o: shoes1.c
+	$(CC) -c shoes1.c -o shoes1.o $(CFLAGS)
+
+shoes2.o: shoes2.c
+	$(CC) -c shoes2.c -o shoes2.o $(CFLAGS)
+
+golf.o: golf.c
+	$(CC) -c golf.c -o golf.o $(CFLAGS)
+
+squares.o: squares.c
+	$(CC) -c squares.c -o squares.o $(CFLAGS)
+
+wheat.o: wheat.c
+	$(CC) -c wheat.c -o wheat.o $(CFLAGS)
+
+post_pre.o: post_pre.c
+	$(CC) -c post_pre.c -o post_pre.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+min_sec.o: min_sec.c
+	$(CC) -c min_sec.c -o min_sec.o $(CFLAGS)
+
+divide.o: divide.c
+	$(CC) -c divide.c -o divide.o $(CFLAGS)
+
+rules.o: rules.c
+	$(CC) -c rules.c -o rules.o $(CFLAGS)
+
+sizeof_.o: sizeof_.c
+	$(CC) -c sizeof_.c -o sizeof_.o $(CFLAGS)
+
+add_one.o: add_one.c
+	$(CC) -c add_one.c -o add_one.o $(CFLAGS)
+
+bottles.o: bottles.c
+	$(CC) -c bottles.c -o bottles.o $(CFLAGS)
+
+addemup.o: addemup.c
+	$(CC) -c addemup.c -o addemup.o $(CFLAGS)
+
+convert.o: convert.c
+	$(CC) -c convert.c -o convert.o $(CFLAGS)
+
+pound_.o: pound_.c
+	$(CC) -c pound_.c -o pound_.o $(CFLAGS)
+
+running.o: running.c
+	$(CC) -c running.c -o running.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+task9.o: task9.c
+	$(CC) -c task9.c -o task9.o $(CFLAGS)
+
+chapter05_private.res: chapter05_private.rc 
+	$(WINDRES) -i chapter05_private.rc --input-format=rc -o chapter05_private.res -O coff 
+

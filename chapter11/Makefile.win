@@ -1,0 +1,180 @@
+# Project: chapter11
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter11_private.res
+OBJ      = main.o addresses.o fgets3.o fgets1.o getsputs.o fgets2.o format.o s_gets.o strings1.o strptr.o arrchar.o p_and_s.o scan_str.o put_out.o nono.o put1.o put2.o put_put.o test_fit.o str_cat.o join_chk.o nogo.o compare.o compback.o quit_chk.o starsrch.o copy1.o copy2.o copy3.o sort_str.o mod_str.o repeat.o hello.o strcnvt.o extra_tasks.o task16.o task15.o task14.o task13.o task12.o task11.o task10.o task9.o task8.o task7.o task6.o task5.o task1.o task4.o task3.o $(RES)
+LINKOBJ  = main.o addresses.o fgets3.o fgets1.o getsputs.o fgets2.o format.o s_gets.o strings1.o strptr.o arrchar.o p_and_s.o scan_str.o put_out.o nono.o put1.o put2.o put_put.o test_fit.o str_cat.o join_chk.o nogo.o compare.o compback.o quit_chk.o starsrch.o copy1.o copy2.o copy3.o sort_str.o mod_str.o repeat.o hello.o strcnvt.o extra_tasks.o task16.o task15.o task14.o task13.o task12.o task11.o task10.o task9.o task8.o task7.o task6.o task5.o task1.o task4.o task3.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -pg -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter11.exe
+CXXFLAGS = $(CXXINCS) -pg -g3
+CFLAGS   = $(INCS) -pg -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+addresses.o: addresses.c
+	$(CC) -c addresses.c -o addresses.o $(CFLAGS)
+
+fgets3.o: fgets3.c
+	$(CC) -c fgets3.c -o fgets3.o $(CFLAGS)
+
+fgets1.o: fgets1.c
+	$(CC) -c fgets1.c -o fgets1.o $(CFLAGS)
+
+getsputs.o: getsputs.c
+	$(CC) -c getsputs.c -o getsputs.o $(CFLAGS)
+
+fgets2.o: fgets2.c
+	$(CC) -c fgets2.c -o fgets2.o $(CFLAGS)
+
+format.o: format.c
+	$(CC) -c format.c -o format.o $(CFLAGS)
+
+s_gets.o: s_gets.c
+	$(CC) -c s_gets.c -o s_gets.o $(CFLAGS)
+
+strings1.o: strings1.c
+	$(CC) -c strings1.c -o strings1.o $(CFLAGS)
+
+strptr.o: strptr.c
+	$(CC) -c strptr.c -o strptr.o $(CFLAGS)
+
+arrchar.o: arrchar.c
+	$(CC) -c arrchar.c -o arrchar.o $(CFLAGS)
+
+p_and_s.o: p_and_s.c
+	$(CC) -c p_and_s.c -o p_and_s.o $(CFLAGS)
+
+scan_str.o: scan_str.c
+	$(CC) -c scan_str.c -o scan_str.o $(CFLAGS)
+
+put_out.o: put_out.c
+	$(CC) -c put_out.c -o put_out.o $(CFLAGS)
+
+nono.o: nono.c
+	$(CC) -c nono.c -o nono.o $(CFLAGS)
+
+put1.o: put1.c
+	$(CC) -c put1.c -o put1.o $(CFLAGS)
+
+put2.o: put2.c
+	$(CC) -c put2.c -o put2.o $(CFLAGS)
+
+put_put.o: put_put.c
+	$(CC) -c put_put.c -o put_put.o $(CFLAGS)
+
+test_fit.o: test_fit.c
+	$(CC) -c test_fit.c -o test_fit.o $(CFLAGS)
+
+str_cat.o: str_cat.c
+	$(CC) -c str_cat.c -o str_cat.o $(CFLAGS)
+
+join_chk.o: join_chk.c
+	$(CC) -c join_chk.c -o join_chk.o $(CFLAGS)
+
+nogo.o: nogo.c
+	$(CC) -c nogo.c -o nogo.o $(CFLAGS)
+
+compare.o: compare.c
+	$(CC) -c compare.c -o compare.o $(CFLAGS)
+
+compback.o: compback.c
+	$(CC) -c compback.c -o compback.o $(CFLAGS)
+
+quit_chk.o: quit_chk.c
+	$(CC) -c quit_chk.c -o quit_chk.o $(CFLAGS)
+
+starsrch.o: starsrch.c
+	$(CC) -c starsrch.c -o starsrch.o $(CFLAGS)
+
+copy1.o: copy1.c
+	$(CC) -c copy1.c -o copy1.o $(CFLAGS)
+
+copy2.o: copy2.c
+	$(CC) -c copy2.c -o copy2.o $(CFLAGS)
+
+copy3.o: copy3.c
+	$(CC) -c copy3.c -o copy3.o $(CFLAGS)
+
+sort_str.o: sort_str.c
+	$(CC) -c sort_str.c -o sort_str.o $(CFLAGS)
+
+mod_str.o: mod_str.c
+	$(CC) -c mod_str.c -o mod_str.o $(CFLAGS)
+
+repeat.o: repeat.c
+	$(CC) -c repeat.c -o repeat.o $(CFLAGS)
+
+hello.o: hello.c
+	$(CC) -c hello.c -o hello.o $(CFLAGS)
+
+strcnvt.o: strcnvt.c
+	$(CC) -c strcnvt.c -o strcnvt.o $(CFLAGS)
+
+extra_tasks.o: extra_tasks.c
+	$(CC) -c extra_tasks.c -o extra_tasks.o $(CFLAGS)
+
+task16.o: task16.c
+	$(CC) -c task16.c -o task16.o $(CFLAGS)
+
+task15.o: task15.c
+	$(CC) -c task15.c -o task15.o $(CFLAGS)
+
+task14.o: task14.c
+	$(CC) -c task14.c -o task14.o $(CFLAGS)
+
+task13.o: task13.c
+	$(CC) -c task13.c -o task13.o $(CFLAGS)
+
+task12.o: task12.c
+	$(CC) -c task12.c -o task12.o $(CFLAGS)
+
+task11.o: task11.c
+	$(CC) -c task11.c -o task11.o $(CFLAGS)
+
+task10.o: task10.c
+	$(CC) -c task10.c -o task10.o $(CFLAGS)
+
+task9.o: task9.c
+	$(CC) -c task9.c -o task9.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+chapter11_private.res: chapter11_private.rc 
+	$(WINDRES) -i chapter11_private.rc --input-format=rc -o chapter11_private.res -O coff 
+

@@ -1,0 +1,87 @@
+# Project: chapter17
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter17_private.res
+OBJ      = main.o films1.o films2.o films3.o list.o mall.o queue.o tree.o use_q.o task1.o task2.o task3.o task4.o stack.o task5.o task6.o task7.o petclub.o treew.o $(RES)
+LINKOBJ  = main.o films1.o films2.o films3.o list.o mall.o queue.o tree.o use_q.o task1.o task2.o task3.o task4.o stack.o task5.o task6.o task7.o petclub.o treew.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter17.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+films1.o: films1.c
+	$(CC) -c films1.c -o films1.o $(CFLAGS)
+
+films2.o: films2.c
+	$(CC) -c films2.c -o films2.o $(CFLAGS)
+
+films3.o: films3.c
+	$(CC) -c films3.c -o films3.o $(CFLAGS)
+
+list.o: list.c
+	$(CC) -c list.c -o list.o $(CFLAGS)
+
+mall.o: mall.c
+	$(CC) -c mall.c -o mall.o $(CFLAGS)
+
+queue.o: queue.c
+	$(CC) -c queue.c -o queue.o $(CFLAGS)
+
+tree.o: tree.c
+	$(CC) -c tree.c -o tree.o $(CFLAGS)
+
+use_q.o: use_q.c
+	$(CC) -c use_q.c -o use_q.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+stack.o: stack.c
+	$(CC) -c stack.c -o stack.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+petclub.o: petclub.c
+	$(CC) -c petclub.c -o petclub.o $(CFLAGS)
+
+treew.o: treew.c
+	$(CC) -c treew.c -o treew.o $(CFLAGS)
+
+chapter17_private.res: chapter17_private.rc 
+	$(WINDRES) -i chapter17_private.rc --input-format=rc -o chapter17_private.res -O coff 
+

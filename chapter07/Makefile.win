@@ -1,0 +1,102 @@
+# Project: chapter07
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = chapter07_private.res
+OBJ      = main.o colddays.o cypher1.o cypher2.o electric.o divisors.o chcount.o wordcnt.o paint.o skippart.o break.o animals.o vowels.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task9.o task10.o task11.o $(RES)
+LINKOBJ  = main.o colddays.o cypher1.o cypher2.o electric.o divisors.o chcount.o wordcnt.o paint.o skippart.o break.o animals.o vowels.o task1.o task2.o task3.o task4.o task5.o task6.o task7.o task8.o task9.o task10.o task11.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter07.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+colddays.o: colddays.c
+	$(CC) -c colddays.c -o colddays.o $(CFLAGS)
+
+cypher1.o: cypher1.c
+	$(CC) -c cypher1.c -o cypher1.o $(CFLAGS)
+
+cypher2.o: cypher2.c
+	$(CC) -c cypher2.c -o cypher2.o $(CFLAGS)
+
+electric.o: electric.c
+	$(CC) -c electric.c -o electric.o $(CFLAGS)
+
+divisors.o: divisors.c
+	$(CC) -c divisors.c -o divisors.o $(CFLAGS)
+
+chcount.o: chcount.c
+	$(CC) -c chcount.c -o chcount.o $(CFLAGS)
+
+wordcnt.o: wordcnt.c
+	$(CC) -c wordcnt.c -o wordcnt.o $(CFLAGS)
+
+paint.o: paint.c
+	$(CC) -c paint.c -o paint.o $(CFLAGS)
+
+skippart.o: skippart.c
+	$(CC) -c skippart.c -o skippart.o $(CFLAGS)
+
+break.o: break.c
+	$(CC) -c break.c -o break.o $(CFLAGS)
+
+animals.o: animals.c
+	$(CC) -c animals.c -o animals.o $(CFLAGS)
+
+vowels.o: vowels.c
+	$(CC) -c vowels.c -o vowels.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+task2.o: task2.c
+	$(CC) -c task2.c -o task2.o $(CFLAGS)
+
+task3.o: task3.c
+	$(CC) -c task3.c -o task3.o $(CFLAGS)
+
+task4.o: task4.c
+	$(CC) -c task4.c -o task4.o $(CFLAGS)
+
+task5.o: task5.c
+	$(CC) -c task5.c -o task5.o $(CFLAGS)
+
+task6.o: task6.c
+	$(CC) -c task6.c -o task6.o $(CFLAGS)
+
+task7.o: task7.c
+	$(CC) -c task7.c -o task7.o $(CFLAGS)
+
+task8.o: task8.c
+	$(CC) -c task8.c -o task8.o $(CFLAGS)
+
+task9.o: task9.c
+	$(CC) -c task9.c -o task9.o $(CFLAGS)
+
+task10.o: task10.c
+	$(CC) -c task10.c -o task10.o $(CFLAGS)
+
+task11.o: task11.c
+	$(CC) -c task11.c -o task11.o $(CFLAGS)
+
+chapter07_private.res: chapter07_private.rc 
+	$(WINDRES) -i chapter07_private.rc --input-format=rc -o chapter07_private.res -O coff 
+

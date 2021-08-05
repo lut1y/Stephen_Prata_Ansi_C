@@ -1,0 +1,51 @@
+# Project: chapter16
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+RES      = chapter16_private.res
+OBJ      = main.o preproc.o mac_arg.o subst.o glue.o variadic.o task1.o $(RES)
+LINKOBJ  = main.o preproc.o mac_arg.o subst.o glue.o variadic.o task1.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = chapter16.exe
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+preproc.o: preproc.c
+	$(CC) -c preproc.c -o preproc.o $(CFLAGS)
+
+mac_arg.o: mac_arg.c
+	$(CC) -c mac_arg.c -o mac_arg.o $(CFLAGS)
+
+subst.o: subst.c
+	$(CC) -c subst.c -o subst.o $(CFLAGS)
+
+glue.o: glue.c
+	$(CC) -c glue.c -o glue.o $(CFLAGS)
+
+variadic.o: variadic.c
+	$(CC) -c variadic.c -o variadic.o $(CFLAGS)
+
+task1.o: task1.c
+	$(CC) -c task1.c -o task1.o $(CFLAGS)
+
+chapter16_private.res: chapter16_private.rc 
+	$(WINDRES) -i chapter16_private.rc --input-format=rc -o chapter16_private.res -O coff 
+
